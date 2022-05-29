@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*---------------------------------명훈---------------------------------------------*/
+.container_m {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0px 48px;
+    width: 100%;
+}
+
+.ul {
+    list-style: none;
+}
+
+.partial_li {
+    width: 350px;
+    height: 473px;
+    padding: 0px 14px;
+}
+
+.partial_Fimg {
+    width: 350px;
+    height: 226px;
+}
+
+.partial_Simg {
+    padding: 8px 0px;
+    width: 350px;
+    height: 67px;
+}
+
+.partial_Simg_2 {
+    padding: 8px 0px;
+    width: 350px;
+    height: 36px;
+}
+
+.partial_text {
+    margin: 0px 0px 8px;
+    width: 350px;
+    height: 108px;
+}
+
+.partial_button {
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.partial_btn_s {
+    color: rgb(75, 75, 75);
+    text-decoration: none;
+    font-size: 20px;
+    background-color: white;
+    border: 0;
+    outline: 0;
+}
+
+.button {
+    padding: 16px 0px 0px;
+}
+
+.super_img {
+    font-family: sans-serif;
+    background-image: url(https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/hair-care/dyson-supersonic/variant/iron-fuschia/605C-Homepage-Banner-US-V3.jpg?$responsive$&cropPathE=desktop&fit=stretch,1&fmt=pjpeg&wid=1920);
+    /* background-size: 1400px 500px;
+    width: 1400px; */
+    background-size: 100% auto;
+    width: 100%;
+
+    height: 400px;
+    padding: 48px 0px;
+}
+
+.super {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 431px;
+    height: 275px;
+    margin: 0px 72px;
+    float: left;
+    padding: 0px 16.5px;
+}
+
+.super_title {
+    width: 310px;
+    height: 40px;
+    margin-right: 40px;
+    margin-bottom: 24px;
+}
+
+.super_dyson {
+    padding: 40px 80px;
+    font-size: 40px;
+}
+
+.super_text {
+    margin-bottom: 12px;
+    width: 400px;
+    height: 60px;
+    font-size: 26px;
+}
+
+.super_end {
+    margin-bottom: 8px;
+    width: 400px;
+    height: 48px;
+    font-size: 16px;
+}
+
+.dyson_span {
+    font-size: 28px;
+    text-decoration: none;
+    margin: 2px 0px 0px 16px;
+    border: 0;
+    outline: 0;
+
+}
+
+.dyson_button {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.dyson_icon {
+    margin: 8px 0px;
+    width: 200px;
+    height: 40px;
+    text-align: left;
+}
+
+.container_f {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 492px;
+    padding: 24px 0px 48px;
+    font-family: sans-serif;
+}
+
+.f_li {
+    width: 255px;
+    height: 420px;
+    padding: 0px 14px;
+}
+
+.f_href:visited {
+    color: black;
+}
+
+.f_Fimg {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* padding-left: 20px; */
+    width: 253px;
+    height: 253px;
+    padding-bottom: 10px;
+    /* background-color: pink;     */
+}
+
+.f_h2 {
+    margin: 0px 0px 8px;
+}
+
+.f_Simg {
+    width: 255px;
+    height: 36px;
+    text-decoration: none;
+    font-size: 21px;
+    color: black;
+    /* background-color: white; */
+}
+
+.f_text {
+    margin: 0px 0px 8px;
+    width: 253px;
+    height: 50px;
+}
+
+.p_container {
+    width: 1263px;
+    height: 29px;
+}
+
+.p_text {
+    margin: 0px 63px 8px;
+    width: 1136px;
+    height: 29px;
+    font-size: 14px;
+}
+
+.p_graybar {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(100, 99, 99);
+    padding-top: 18px;
+    padding-bottom: 22px;
+}
+
+/*------------------------------------------ 영민 -----------------------------------*/
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    /* padding: 120px 30px 50px 70px; */
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+/* 카피제외 */
+.Contaner {
+    display: flex;
+    flex-direction: row;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    line-height: 40px;
+
+    padding: 76px 0 0 120px;
+}
+
+.menu1 {
+    margin-left: 30px;
+    line-height: 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    width: 25%;
+    height: 700px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    font-weight: bold;
+
+    padding: 76px 0 0 0;
+}
+
+.menu2 {
+    margin-left: 30px;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    line-height: 40px;
+    border-bottom: 1px solid grey;
+    list-style: none;
+
+    padding: 76px 0 0 0;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    height: 100px;
+
+    padding: 0 0 0 120px;
+}
+
+.copyright div:first-of-type {
+    visibility: hidden;
+}
+
+.go:hover {
+    opacity: 0.5;
+}
+
+.menu1opacity:hover {
+    opacity: 0.5;
+}
