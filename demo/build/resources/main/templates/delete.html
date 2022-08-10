@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+        <script th:inline="javascript">
+
+            var message = [[${message}]];
+            //alert 창을 띄우는 함수
+            alert(message);
+            //이동 시킬 페이지 경로 지정
+            location.replace([[${searchUrl}]]);
+
+        </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 수정</title>
+
+
+</head>
+<style>
+    .layout{
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 400px;
+    }
+</style>
+<body>
+<h1 th:align="center">게시글 수정</h1>
+<div class="layout">
+    <form th:action="@{/board/update/{id}(id = ${board.id})}" method="post">
+        <!--action : 어디로 보내줄 껀지 지정 / 메소드는 포스트 방식으로-->
+        <table>
+            <tr>
+                <td bgcolor="#b0c4de" th:text="제목"></td>
+                <td><input name="title" type="text" th:value="${board.title}" cols="60" rows="5"></td>
+            </tr>
+            <tr>
+                <td bgcolor="#b0c4de" th:text="내용"></td>
+                <td><textarea name="content" th:text="${board.content}" cols="60" rows="20"></textarea></td>
+            </tr>
+            <tr>
+                <td th:align="center"><button type="submit">수정완료</button></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+</body>
+</html>

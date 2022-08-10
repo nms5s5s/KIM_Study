@@ -2,10 +2,7 @@ package com.example.demo.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 //엔티티는 테이블을 의미
 @Entity
@@ -25,4 +22,8 @@ public class Board {
     private String title;
 
     private String content;
+
+    private String filename;
+
+    private String filepath;
 }

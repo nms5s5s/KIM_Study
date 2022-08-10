@@ -10,7 +10,7 @@
 
 <h1 th:align="center">게시글 상세 페이지</h1>
 <form>
-<table th:align="center" border="1" th:cellpadding="0" th:cellspacing="0" >
+<table th:align="center">
     <tr>
         <td bgcolor="#b0c4de" th:text="번호" width="80"></td>
         <td th:text="${board.id}"></td>
@@ -21,12 +21,14 @@
     </tr>
     <tr>
         <td bgcolor="#b0c4de" th:text="내용" ></td>
-        <td th:text="${board.title}" cols="40" rows="10"></td>
+        <td th:text="${board.content}" cols="60" rows="20"></td>
     </tr>
 
 <!--글삭제 하기 자기자신꺼를 불러와서 삭제-->
 </table>
 </form>
-    <a th:href="@{/board/delete(id=${board.id})}" th:align="center">글삭제</a>
+    <a th:href="@{${board.filepath}}">다운받기</a>
+    <a th:align="center" th:href="@{/board/delete(id=${board.id})}">글삭제</a>
+    <a th:href="@{/board/modify/{id}(id = ${board.id})}">수정</a>
 </body>
 </html>
