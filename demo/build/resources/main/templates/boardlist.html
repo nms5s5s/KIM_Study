@@ -35,14 +35,26 @@
 <!--model.addAttribute("list",boardService.boardList()); 이부분에서 list로 가져오겠다 하여 이곳에 써주는것-->
                     <td th:text="${board.id}">1</td>
                     <td>
-                        <a  th:text="${board.title}" th:href="@{/board/view(id=${board.id})}"></a>
+                        <a  th:text="${board.title}" th:href="@{/board/view(id=${board.id})}">제목</a>
                     </td>
 <!--localhost:8080/board/view?id=board.id 즉 board.id에 넣어준다.-->
                     <td th:text="${board.content}">내용입니다</td>
+                    <td th:text="${board.writer}">작성자입니다</td>
+                </tr>
+                <tr>
+                    <td><a th:href="@{/board/write}">글등록</a></td>
                 </tr>
             </tbody>
         </table>
-        <a th:href="@{/board/write}">글등록</a>
+<!--        굳이 태그가 필요없을 때 타임리프 공식-->
+        <th:block th:each="page : ${#numbers.sequence(startPage, endPage)}">
+            <a th:if="${page != nowPage}" th:href = "@{/board/list(page = ${page -1}, searchKeyword = ${param.serchKeyword})}" th:text="${page}"></a>
+            <strong th:if="${page == nowPage}" th:text="${page}" style="color: lightsteelblue"></strong>
+        <form th:action="@{/board/list}" method="get">
+            <input type="text" name="searchKeyword">
+            <button type="submit">검색</button>
+        </form>
+        </th:block>
     </div>
 </body>
 </html>

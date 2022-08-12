@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>게시글 수정</title>
-
-
 </head>
 <style>
     .layout{
@@ -27,6 +25,7 @@
                 <td bgcolor="#b0c4de" th:text="내용"></td>
                 <td><textarea name="content" th:text="${board.content}" cols="60" rows="20"></textarea></td>
             </tr>
+
             <tr>
                 <td th:align="center"><button type="submit">수정완료</button></td>
             </tr>

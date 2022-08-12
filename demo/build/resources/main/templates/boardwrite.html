@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>게시글 작성폼</title>
-
-
 </head>
         <style>
             .layout{
@@ -16,7 +14,7 @@
 <body>
 <h1 th:align="center">게시글 작성</h1>
 <div class="layout">
-    <form action="/board/writepro" method="post">
+    <form action="/board/writepro" method="post" enctype="multipart/form-data">
 <!--action : 어디로 보내줄 껀지 지정 / 메소드는 포스트 방식으로-->
         <table>
             <tr>
@@ -27,13 +25,19 @@
                 <td bgcolor="#b0c4de" th:text="내용"></td>
                 <td><textarea name="content"></textarea></td>
             </tr>
-
+            <tr>
+                <td bgcolor="#b0c4de" th:text="작성자"></td>
+                <td><input name="writer" type="text"></td>
+            </tr>
+            <tr>
+                <td bgcolor="#b0c4de" th:text="파일첨부"></td>
+                <td><input name="file" type="file"></td>
+            </tr>
             <tr>
                 <td th:align="center"><button type="submit">작성</button></td>
             </tr>
 
         </table>
-        <input type="file" name="file">
     </form>
 </div>
 </body>

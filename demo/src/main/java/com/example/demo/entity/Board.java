@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 //엔티티는 테이블을 의미
 @Entity
@@ -18,12 +19,19 @@ public class Board {
     //identity : my sql에서 사용할때
     //sequence : oracle 에서 사용
     private Integer id;
-
+// 글 제목
     private String title;
-
+// 글 내용
     private String content;
-
+// 글 작성자
+    private String writer;
+// 글 등록일
+    private Date createDate;
+// 조회수
+    private Long cnt;
+//첨부파일 이름
     private String filename;
-
+//첨부파일 경로
     private String filepath;
+
 }
