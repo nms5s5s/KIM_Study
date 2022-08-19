@@ -1,6 +1,7 @@
 package com.example.jumptostringboot.question;
 
 import com.example.jumptostringboot.answer.Answer;
+import com.example.jumptostringboot.user.SiteUser;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,4 +30,7 @@ public class Question {
     //Question하나에 Answer여러개이므로 Question엔티티에 추가할 답변의 속성은 List형태로 구성해야한다.
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;
+
+    @ManyToOne
+    private SiteUser author;
 }

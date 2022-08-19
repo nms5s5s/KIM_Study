@@ -1,6 +1,7 @@
 package com.example.jumptostringboot.answer;
 
 import com.example.jumptostringboot.question.Question;
+import com.example.jumptostringboot.user.SiteUser;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,4 +25,7 @@ public class Answer {
 
     @ManyToOne
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
 }

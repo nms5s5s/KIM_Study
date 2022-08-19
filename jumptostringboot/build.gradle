@@ -35,6 +35,14 @@ dependencies {
 
     //NotEmpty 필요
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.5.2'
+    //입력값 검증 (2-15)
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    //thymeleaf 템플릿 엔진에 레이아웃적용
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    //시큐리티
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+
 }
 
 tasks.named('test') {
