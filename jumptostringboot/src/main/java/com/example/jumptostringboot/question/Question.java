@@ -6,8 +6,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 
 @Getter
@@ -22,6 +24,8 @@ public class Question {
 
     private String content;
 
+    private LocalDateTime modifyDate;
+
     @Column(insertable = false, updatable = false, columnDefinition = "date default sysdate")
     private Date createDate;
     //답변은 하나의 질문에 여러개가 달리수 있는 구조이다.n:1 관계라고 할수있다.
@@ -33,4 +37,7 @@ public class Question {
 
     @ManyToOne
     private SiteUser author;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }
